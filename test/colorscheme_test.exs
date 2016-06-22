@@ -28,8 +28,8 @@ defmodule Colorscheme.TerminalTest do
     ) == File.read!("test/example.terminal")
   end
 
-  test "converts a color to a binary plist" do
-    assert Colorscheme.Terminal.color_to_binary_plist("222222") == """
+  test "converts a color to a bas64 encoded string" do
+    assert Colorscheme.Terminal.color_to_base64_encoded_string("222222") == """
     YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
     AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
     LjEzMzMzMzMzMzMgMC4xMzMzMzMzMzMzIDAuMTMzMzMzMzMzMwAQAYAC0hAREhNaJGNs
