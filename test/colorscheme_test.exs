@@ -27,4 +27,15 @@ defmodule Colorscheme.TerminalTest do
       text: "FFFFFF"
     ) == File.read!("test/example.terminal")
   end
+
+  test "converts a color to a binary plist" do
+    assert Colorscheme.Terminal.color_to_binary_plist("222222") == """
+    YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3AS
+    AAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFjZVYkY2xhc3NPECcw
+    LjEzMzMzMzMzMzMgMC4xMzMzMzMzMzMzIDAuMTMzMzMzMzMzMwAQAYAC0hAREhNaJGNs
+    YXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIUWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hp
+    dmVy0RcYVHJvb3SAAQgRGiMtMjc7QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAA
+    AAAZAAAAAAAAAAAAAAAAAAAA2Q==
+    """
+  end
 end
