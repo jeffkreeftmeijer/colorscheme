@@ -211,7 +211,7 @@ defmodule Colorscheme.Terminal do
   end
 
   def color_to_base64_encoded_string("222222") do
-    encoded = [0.1333333333, 0.1333333333, 0.1333333333]
+    encoded = color_to_rgb("222222")
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
 
