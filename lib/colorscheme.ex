@@ -202,8 +202,9 @@ defmodule Colorscheme.Terminal do
   end
 
   def color_to_base64_encoded_string("222222") do
-    encoded = "bplist00\xD4\x01\x02\x03\x04\x05\x06\x15\x16X$versionX$objectsY$archiverT$top\x12\x00\x01\x86\xA0\xA3\a\b\x0FU$null\xD3\t\n\v\f\r\x0EUNSRGB\\NSColorSpaceV$classO\x10'0.1333333333 0.1333333333 0.1333333333\x00\x10\x01\x80\x02\xD2\x10\x11\x12\x13Z$classnameX$classesWNSColor\xA2\x12\x14XNSObject_\x10\x0FNSKeyedArchiver\xD1\x17\x18Troot\x80\x01\b\x11\x1A#-27;AHN[b\x8C\x8E\x90\x95\xA0\xA9\xB1\xB4\xBD\xCF\xD2\xD7\x00\x00\x00\x00\x00\x00\x01\x01\x00\x00\x00\x00\x00\x00\x00\x19\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xD9"
-    |> Base.encode64
+    encoded = [0.1333333333, 0.1333333333, 0.1333333333]
+              |> Colorscheme.Terminal.color_to_binary_plist
+              |> Base.encode64
 
     Regex.scan(~r/.{0,68}/, encoded) |> List.flatten |> Enum.join("\n")
   end
