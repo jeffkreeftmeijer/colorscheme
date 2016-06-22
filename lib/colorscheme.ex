@@ -210,11 +210,17 @@ defmodule Colorscheme.Terminal do
     end)
   end
 
-  def color_to_base64_encoded_string("222222") do
-    encoded = color_to_rgb("222222")
+  def color_to_base64_encoded_string(color) do
+    encoded = color 
+              |> color_to_rgb
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
 
-    Regex.scan(~r/.{0,68}/, encoded) |> List.flatten |> Enum.join("\n")
+    Regex.scan(~r/.{0,68}/, encoded) 
+    |> List.flatten 
+    |> Enum.filter(fn(part) ->
+      String.length(part) > 0
+    end)
+    |> Enum.join("\n\t")
   end
 end
