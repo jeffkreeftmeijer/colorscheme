@@ -5,91 +5,11 @@ defmodule Colorscheme.Terminal do
     <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
     <plist version="1.0">
     <dict>
-    	<key>ANSIBlackColor</key>
+    	<%= for {key, color} <- colors do %><key><%= Colorscheme.Terminal.color_name(key) %></key>
     	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:black]) %>
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(color) %>
     	</data>
-    	<key>ANSIBlueColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:blue]) %>
-    	</data>
-    	<key>ANSIBrightBlackColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_black]) %>
-    	</data>
-    	<key>ANSIBrightBlueColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_blue]) %>
-    	</data>
-    	<key>ANSIBrightCyanColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_cyan]) %>
-    	</data>
-    	<key>ANSIBrightGreenColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_green]) %>
-    	</data>
-    	<key>ANSIBrightMagentaColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_magenta]) %>
-    	</data>
-    	<key>ANSIBrightRedColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_red]) %>
-    	</data>
-    	<key>ANSIBrightWhiteColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_white]) %>
-    	</data>
-    	<key>ANSIBrightYellowColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_yellow]) %>
-    	</data>
-    	<key>ANSICyanColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:cyan]) %>
-    	</data>
-    	<key>ANSIGreenColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:green]) %>
-    	</data>
-    	<key>ANSIMagentaColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:magenta]) %>
-    	</data>
-    	<key>ANSIRedColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:red]) %>
-    	</data>
-    	<key>ANSIWhiteColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:white]) %>
-    	</data>
-    	<key>ANSIYellowColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:yellow]) %>
-    	</data>
-    	<key>BackgroundColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:background]) %>
-    	</data>
-    	<key>CursorColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:cursor]) %>
-    	</data>
-    	<key>SelectionColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:selection]) %>
-    	</data>
-    	<key>TextBoldColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bold_text]) %>
-    	</data>
-    	<key>TextColor</key>
-    	<data>
-    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:text]) %>
-    	</data>
-    	<key>ProfileCurrentVersion</key>
+    	<% end %><key>ProfileCurrentVersion</key>
     	<real>2.02</real>
     	<key>type</key>
     	<string>Window Settings</string>
