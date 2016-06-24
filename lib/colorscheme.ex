@@ -7,213 +7,87 @@ defmodule Colorscheme.Terminal do
     <dict>
     	<key>ANSIBlackColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjA5NDExNzY0NzEgMC4wOTQxMTc2NDcxIDAuMDk0MTE3
-    	NjQ3MQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:black]) %>
     	</data>
     	<key>ANSIBlueColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjQ4NjI3NDUwOTggMC42ODYyNzQ1MDk4IDAuNzYwNzg0
-    	MzEzNwAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:blue]) %>
     	</data>
     	<key>ANSIBrightBlackColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjM0NTA5ODAzOTIgMC4zNDUwOTgwMzkyIDAuMzQ1MDk4
-    	MDM5MgAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_black]) %>
     	</data>
     	<key>ANSIBrightBlueColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjcyMTU2ODYyNzUgMC43MjE1Njg2Mjc1IDAuNzIxNTY4
-    	NjI3NQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_blue]) %>
     	</data>
     	<key>ANSIBrightCyanColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjYzMTM3MjU0OTAgMC40MTE3NjQ3MDU5IDAuMjc0NTA5
-    	ODAzOQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_cyan]) %>
     	</data>
     	<key>ANSIBrightGreenColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjE1Njg2Mjc0NTEgMC4xNTY4NjI3NDUxIDAuMTU2ODYy
-    	NzQ1MQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_green]) %>
     	</data>
     	<key>ANSIBrightMagentaColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjkwOTgwMzkyMTYgMC45MDk4MDM5MjE2IDAuOTA5ODAz
-    	OTIxNgAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_magenta]) %>
     	</data>
     	<key>ANSIBrightRedColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjg2Mjc0NTA5ODAgMC41ODgyMzUyOTQxIDAuMzM3MjU0
-    	OTAyMAAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_red]) %>
     	</data>
     	<key>ANSIBrightWhiteColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjk3MjU0OTAxOTYgMC45NzI1NDkwMTk2IDAuOTcyNTQ5
-    	MDE5NgAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_white]) %>
     	</data>
     	<key>ANSIBrightYellowColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjIxOTYwNzg0MzEgMC4yMTk2MDc4NDMxIDAuMjE5NjA3
-    	ODQzMQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bright_yellow]) %>
     	</data>
     	<key>ANSICyanColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjUyNTQ5MDE5NjEgMC43NTY4NjI3NDUxIDAuNzI1NDkw
-    	MTk2MQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:cyan]) %>
     	</data>
     	<key>ANSIGreenColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjYzMTM3MjU0OTAgMC43MDk4MDM5MjE2IDAuNDIzNTI5
-    	NDExOAAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:green]) %>
     	</data>
     	<key>ANSIMagentaColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjcyOTQxMTc2NDcgMC41NDUwOTgwMzkyIDAuNjg2Mjc0
-    	NTA5OAAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:magenta]) %>
     	</data>
     	<key>ANSIRedColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjY3MDU4ODIzNTMgMC4yNzQ1MDk4MDM5IDAuMjU4ODIz
-    	NTI5NAAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:red]) %>
     	</data>
     	<key>ANSIWhiteColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjg0NzA1ODgyMzUgMC44NDcwNTg4MjM1IDAuODQ3MDU4
-    	ODIzNQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:white]) %>
     	</data>
     	<key>ANSIYellowColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjk2ODYyNzQ1MTAgMC43OTIxNTY4NjI3IDAuNTMzMzMz
-    	MzMzMwAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:yellow]) %>
     	</data>
     	<key>BackgroundColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjA5NDExNzY0NzEgMC4wOTQxMTc2NDcxIDAuMDk0MTE3
-    	NjQ3MQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:background]) %>
     	</data>
     	<key>CursorColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjg0NzA1ODgyMzUgMC44NDcwNTg4MjM1IDAuODQ3MDU4
-    	ODIzNQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:cursor]) %>
     	</data>
     	<key>SelectionColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjM0NTA5ODAzOTIgMC4zNDUwOTgwMzkyIDAuMzQ1MDk4
-    	MDM5MgAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:selection]) %>
     	</data>
     	<key>TextBoldColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjg0NzA1ODgyMzUgMC44NDcwNTg4MjM1IDAuODQ3MDU4
-    	ODIzNQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:bold_text]) %>
     	</data>
     	<key>TextColor</key>
     	<data>
-    	YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy
-    	VCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj
-    	ZVYkY2xhc3NPECcwLjg0NzA1ODgyMzUgMC44NDcwNTg4MjM1IDAuODQ3MDU4
-    	ODIzNQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU
-    	WE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7
-    	QUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA
-    	AAAA2Q==
+    	<%= Colorscheme.Terminal.color_to_base64_encoded_string(colors[:text]) %>
     	</data>
     	<key>ProfileCurrentVersion</key>
     	<real>2.02</real>

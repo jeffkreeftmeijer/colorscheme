@@ -24,7 +24,7 @@ defmodule Colorscheme.TerminalTest do
       background: "181818",
       cursor: "D8D8D8",
       selection: "585858",
-      bold: "D8D8D8",
+      bold_text: "D8D8D8",
       text: "D8D8D8"
     ) == File.read!("test/base16-default.dark.terminal")
   end
