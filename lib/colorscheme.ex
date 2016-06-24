@@ -128,4 +128,26 @@ defmodule Colorscheme.Terminal do
   defp float_to_formatted_string(float) do
     :io_lib.format("~.10f", [float]) |> to_string
   end
+
+  def color_name(:black), do: "ANSIBlackColor"
+  def color_name(:red), do: "ANSIRedColor"
+  def color_name(:green), do: "ANSIGreenColor"
+  def color_name(:yellow), do: "ANSIYellowColor"
+  def color_name(:blue), do: "ANSIBlueColor"
+  def color_name(:magenta), do: "ANSIMagentaColor"
+  def color_name(:cyan), do: "ANSICyanColor"
+  def color_name(:white), do: "ANSIWhiteColor"
+  def color_name(:bright_black), do: "ANSIBrightBlackColor"
+  def color_name(:bright_red), do: "ANSIBrightRedColor"
+  def color_name(:bright_green), do: "ANSIBrightGreenColor"
+  def color_name(:bright_yellow), do: "ANSIBrightYellowColor"
+  def color_name(:bright_blue), do: "ANSIBrightBlueColor"
+  def color_name(:bright_magenta), do: "ANSIBrightMagentaColor"
+  def color_name(:bright_cyan), do: "ANSIBrightCyanColor"
+  def color_name(:bright_white), do: "ANSIBrightWhiteColor"
+  def color_name(:background), do: "BackgroundColor"
+  def color_name(:cursor), do: "CursorColor"
+  def color_name(:selection), do: "SelectionColor"
+  def color_name(:bold_text), do: "TextBoldColor"
+  def color_name(:text), do: "TextColor"
 end

@@ -43,4 +43,30 @@ defmodule Colorscheme.TerminalTest do
     assert Colorscheme.Terminal.color_to_base64_encoded_string("181818") == "YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy\n\tVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj\n\tZVYkY2xhc3NPECcwLjA5NDExNzY0NzEgMC4wOTQxMTc2NDcxIDAuMDk0MTE3\n\tNjQ3MQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU\n\tWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7\n\tQUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA\n\tAAAA2Q=="
     assert Colorscheme.Terminal.color_to_base64_encoded_string("A16946") == "YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy\n\tVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj\n\tZVYkY2xhc3NPECcwLjYzMTM3MjU0OTAgMC40MTE3NjQ3MDU5IDAuMjc0NTA5\n\tODAzOQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU\n\tWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7\n\tQUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA\n\tAAAA2Q=="
   end
+
+  test "converts color atoms to color names for Terminal.app" do
+    assert Colorscheme.Terminal.color_name(:black) == "ANSIBlackColor"
+    assert Colorscheme.Terminal.color_name(:red) == "ANSIRedColor"
+    assert Colorscheme.Terminal.color_name(:green) == "ANSIGreenColor"
+    assert Colorscheme.Terminal.color_name(:yellow) == "ANSIYellowColor"
+    assert Colorscheme.Terminal.color_name(:blue) == "ANSIBlueColor"
+    assert Colorscheme.Terminal.color_name(:magenta) == "ANSIMagentaColor"
+    assert Colorscheme.Terminal.color_name(:cyan) == "ANSICyanColor"
+    assert Colorscheme.Terminal.color_name(:white) == "ANSIWhiteColor"
+
+    assert Colorscheme.Terminal.color_name(:bright_black) == "ANSIBrightBlackColor"
+    assert Colorscheme.Terminal.color_name(:bright_red) == "ANSIBrightRedColor"
+    assert Colorscheme.Terminal.color_name(:bright_green) == "ANSIBrightGreenColor"
+    assert Colorscheme.Terminal.color_name(:bright_yellow) == "ANSIBrightYellowColor"
+    assert Colorscheme.Terminal.color_name(:bright_blue) == "ANSIBrightBlueColor"
+    assert Colorscheme.Terminal.color_name(:bright_magenta) == "ANSIBrightMagentaColor"
+    assert Colorscheme.Terminal.color_name(:bright_cyan) == "ANSIBrightCyanColor"
+    assert Colorscheme.Terminal.color_name(:bright_white) == "ANSIBrightWhiteColor"
+
+    assert Colorscheme.Terminal.color_name(:background) == "BackgroundColor"
+    assert Colorscheme.Terminal.color_name(:cursor) == "CursorColor"
+    assert Colorscheme.Terminal.color_name(:selection) == "SelectionColor"
+    assert Colorscheme.Terminal.color_name(:bold_text) == "TextBoldColor"
+    assert Colorscheme.Terminal.color_name(:text) == "TextColor"
+  end
 end
