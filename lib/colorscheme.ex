@@ -233,7 +233,7 @@ defmodule Colorscheme.Terminal do
 
     Enum.map(result, fn(n) ->
      {base, _} = Integer.parse(n, 16)
-     base / 255 |> Float.round(10)
+     base / 255 |> float_to_formatted_string
     end)
   end
 
@@ -249,5 +249,9 @@ defmodule Colorscheme.Terminal do
       String.length(part) > 0
     end)
     |> Enum.join("\n\t")
+  end
+
+  defp float_to_formatted_string(float) do
+    :io_lib.format("~.10f", [float]) |> to_string
   end
 end
