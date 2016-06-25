@@ -4,11 +4,7 @@ defmodule Colorscheme.Color do
 
     Enum.map(result, fn(n) ->
      {base, _} = Integer.parse(n, 16)
-     base / 255 |> float_to_formatted_string
+     base / 255
     end)
-  end
-
-  defp float_to_formatted_string(float) do
-    :io_lib.format("~.10f", [float]) |> to_string
   end
 end

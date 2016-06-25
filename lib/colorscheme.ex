@@ -25,6 +25,7 @@ defmodule Colorscheme.Terminal do
   def color_to_base64_encoded_string(color) do
     encoded = color 
               |> Colorscheme.Color.to_rgb
+              |> Enum.map(fn(value) -> value |> float_to_formatted_string end)
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
 
@@ -57,4 +58,8 @@ defmodule Colorscheme.Terminal do
   def color_name(:selection), do: "SelectionColor"
   def color_name(:bold_text), do: "TextBoldColor"
   def color_name(:text), do: "TextColor"
+
+  defp float_to_formatted_string(float) do
+    :io_lib.format("~.10f", [float]) |> to_string
+  end
 end
