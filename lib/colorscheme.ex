@@ -65,6 +65,28 @@ defmodule Colorscheme.Terminal do
 end
 
 defmodule Colorscheme.Iterm2 do
+  def to_plist(colors) do
+    EEx.eval_string("""
+    <?xml version=\"1.0\" encoding=\"UTF-8\"?>
+    <!DOCTYPE plist PUBLIC \"-//Apple//DTD PLIST 1.0//EN\" \"http://www.apple.com/DTDs/PropertyList-1.0.dtd\">
+    <plist version=\"1.0\">
+    <dict><%= for {key, color} <- colors do %>
+    	<key><%= Colorscheme.Iterm2.color_name(key) %></key>
+    	<dict>
+    		<key>Color Space</key>
+    		<string>sRGB</string>
+    		<key>Blue Component</key>
+    		<real><%= Colorscheme.Color.blue(color) %></real>
+    		<key>Green Component</key>
+    		<real><%= Colorscheme.Color.green(color) %></real>
+    		<key>Red Component</key>
+    		<real><%= Colorscheme.Color.red(color) %></real>
+    	</dict><% end %>
+    </dict>
+    </plist>
+    """, colors: colors)
+  end
+
   def color_name(:black), do: "Ansi 0 Color"
   def color_name(:red), do: "Ansi 1 Color"
   def color_name(:green), do: "Ansi 2 Color"

@@ -70,6 +70,33 @@ defmodule Colorscheme.Iterm2Test do
   use ExUnit.Case
   doctest Colorscheme.Terminal
 
+  test "creates a color scheme for iTerm2" do
+    assert Colorscheme.Iterm2.to_plist(
+      black: "181818",
+      red: "AB4642",
+      bright_green: "282828",
+      bright_yellow: "383838",
+      bright_blue: "B8B8B8",
+      bright_magenta: "E8E8E8",
+      bright_cyan: "A16946",
+      bright_white: "F8F8F8",
+      green: "A1B56C",
+      yellow: "F7CA88",
+      blue: "7CAFC2",
+      magenta: "BA8BAF",
+      cyan: "86C1B9",
+      white: "D8D8D8",
+      bright_black: "585858",
+      bright_red: "DC9656",
+
+      background: "181818",
+      bold_text: "D8D8D8",
+      cursor: "D8D8D8",
+      text: "D8D8D8",
+      selection: "383838"
+    ) == File.read!("test/base16-default.dark.itermcolors")
+  end
+
   test "converts color atoms to color names for iTerm2" do
     assert Colorscheme.Iterm2.color_name(:black) == "Ansi 0 Color"
     assert Colorscheme.Iterm2.color_name(:red) == "Ansi 1 Color"
