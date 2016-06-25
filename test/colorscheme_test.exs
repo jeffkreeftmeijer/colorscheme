@@ -65,3 +65,34 @@ defmodule Colorscheme.TerminalTest do
     assert Colorscheme.Terminal.color_name(:text) == "TextColor"
   end
 end
+
+defmodule Colorscheme.Iterm2Test do
+  use ExUnit.Case
+  doctest Colorscheme.Terminal
+
+  test "converts color atoms to color names for iTerm2" do
+    assert Colorscheme.Iterm2.color_name(:black) == "Ansi 0 Color"
+    assert Colorscheme.Iterm2.color_name(:red) == "Ansi 1 Color"
+    assert Colorscheme.Iterm2.color_name(:green) == "Ansi 2 Color"
+    assert Colorscheme.Iterm2.color_name(:yellow) == "Ansi 3 Color"
+    assert Colorscheme.Iterm2.color_name(:blue) == "Ansi 4 Color"
+    assert Colorscheme.Iterm2.color_name(:magenta) == "Ansi 5 Color"
+    assert Colorscheme.Iterm2.color_name(:cyan) == "Ansi 6 Color"
+    assert Colorscheme.Iterm2.color_name(:white) == "Ansi 7 Color"
+
+    assert Colorscheme.Iterm2.color_name(:bright_black) == "Ansi 8 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_red) == "Ansi 9 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_green) == "Ansi 10 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_yellow) == "Ansi 11 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_blue) == "Ansi 12 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_magenta) == "Ansi 13 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_cyan) == "Ansi 14 Color"
+    assert Colorscheme.Iterm2.color_name(:bright_white) == "Ansi 15 Color"
+
+    assert Colorscheme.Iterm2.color_name(:background) == "Background Color"
+    assert Colorscheme.Iterm2.color_name(:cursor) == "Cursor Color"
+    assert Colorscheme.Iterm2.color_name(:selection) == "Selection Color"
+    assert Colorscheme.Iterm2.color_name(:bold_text) == "Bold Color"
+    assert Colorscheme.Iterm2.color_name(:text) == "Foreground Color"
+  end
+end
