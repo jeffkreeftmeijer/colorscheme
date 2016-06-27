@@ -25,15 +25,13 @@ defmodule Colorscheme.Terminal do
   def color_to_base64_encoded_string(color) do
     encoded = color 
               |> Colorscheme.Color.to_rgb
-              |> Enum.map(fn(value) -> value |> float_to_formatted_string end)
+              |> Enum.map(&float_to_formatted_string(&1))
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
 
     Regex.scan(~r/.{0,60}/, encoded)
     |> List.flatten 
-    |> Enum.filter(fn(part) ->
-      String.length(part) > 0
-    end)
+    |> Enum.filter(&(String.length(&1) > 0))
     |> Enum.join("\n\t")
   end
 
