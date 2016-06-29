@@ -1,6 +1,6 @@
 # Colorscheme
 
-A library to generate Terminal color schemes. Used for [wwdc16.terminal].
+A library to generate Terminal.app and iTerm2 color schemes. Used for [wwdc16.terminal].
 
 [wwdc16.terminal]: https://github.com/jeffkreeftmeijer/wwdc16.terminal
 
