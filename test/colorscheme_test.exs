@@ -1,32 +1,39 @@
 defmodule ColorschemeTest do
   use ExUnit.Case
 
-  describe "generating color schemes for Terminal.app" do
-    test "creates a color scheme for Terminal.app" do
-      assert Colorscheme.Terminal.to_plist(
-        black: "181818",
-        blue: "7CAFC2",
-        bright_black: "585858",
-        bright_blue: "B8B8B8",
-        bright_cyan: "A16946",
-        bright_green: "282828",
-        bright_magenta: "E8E8E8",
-        bright_red: "DC9656",
-        bright_white: "F8F8F8",
-        bright_yellow: "383838",
-        cyan: "86C1B9",
-        green: "A1B56C",
-        magenta: "BA8BAF",
-        red: "AB4642",
-        white: "D8D8D8",
-        yellow: "F7CA88",
+  setup do
+    colors = [
+      black: "181818",
+      blue: "7CAFC2",
+      bright_black: "585858",
+      bright_blue: "B8B8B8",
+      bright_cyan: "A16946",
+      bright_green: "282828",
+      bright_magenta: "E8E8E8",
+      bright_red: "DC9656",
+      bright_white: "F8F8F8",
+      bright_yellow: "383838",
+      cyan: "86C1B9",
+      green: "A1B56C",
+      magenta: "BA8BAF",
+      red: "AB4642",
+      white: "D8D8D8",
+      yellow: "F7CA88",
 
-        background: "181818",
-        cursor: "D8D8D8",
-        selection: "585858",
-        bold_text: "D8D8D8",
-        text: "D8D8D8"
-      ) == File.read!("test/base16-default.dark.terminal")
+      background: "181818",
+      cursor: "D8D8D8",
+      selection: "585858",
+      bold_text: "D8D8D8",
+      text: "D8D8D8"
+    ]
+
+    {:ok, [colors: colors]}
+  end
+
+  describe "generating color schemes for Terminal.app" do
+    test "creates a color scheme for Terminal.app", context do
+      plist = Colorscheme.Terminal.to_plist(context[:colors])
+      assert plist == File.read!("test/base16-default.dark.terminal")
     end
 
     test "converts a color to a binary plist" do
@@ -67,31 +74,9 @@ defmodule ColorschemeTest do
   end
 
   describe "generating color schemes for Terminal.app" do
-    test "creates a color scheme for iTerm2" do
-      assert Colorscheme.Iterm2.to_plist(
-        black: "181818",
-        blue: "7CAFC2",
-        bright_black: "585858",
-        bright_blue: "B8B8B8",
-        bright_cyan: "A16946",
-        bright_green: "282828",
-        bright_magenta: "E8E8E8",
-        bright_red: "DC9656",
-        bright_white: "F8F8F8",
-        bright_yellow: "383838",
-        cyan: "86C1B9",
-        green: "A1B56C",
-        magenta: "BA8BAF",
-        red: "AB4642",
-        white: "D8D8D8",
-        yellow: "F7CA88",
-
-        background: "181818",
-        cursor: "D8D8D8",
-        selection: "585858",
-        bold_text: "D8D8D8",
-        text: "D8D8D8"
-      ) == File.read!("test/base16-default.dark.itermcolors")
+    test "creates a color scheme for iTerm2", context do
+      plist = Colorscheme.Iterm2.to_plist(context[:colors])
+      assert plist  == File.read!("test/base16-default.dark.itermcolors")
     end
 
     test "converts color atoms to color names for iTerm2" do
