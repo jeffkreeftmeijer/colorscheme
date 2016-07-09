@@ -93,7 +93,7 @@ defmodule Colorscheme.Iterm2Test do
       bold_text: "D8D8D8",
       cursor: "D8D8D8",
       text: "D8D8D8",
-      selection: "383838"
+      selection: "585858",
     ) == File.read!("test/base16-default.dark.itermcolors")
   end
 
