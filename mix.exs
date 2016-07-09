@@ -27,6 +27,8 @@ defmodule Colorscheme.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:color, git: "https://github.com/jeffkreeftmeijer/color"}
+    ]
   end
 end
