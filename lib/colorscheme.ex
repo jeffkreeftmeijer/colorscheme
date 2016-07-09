@@ -24,7 +24,6 @@ defmodule Colorscheme.Terminal do
 
   def color_to_base64_encoded_string(color) do
     encoded = color 
-              |> Color.from_hexadecimal
               |> Enum.map(&float_to_formatted_string(&1))
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
@@ -74,11 +73,11 @@ defmodule Colorscheme.Iterm2 do
     		<key>Color Space</key>
     		<string>sRGB</string>
     		<key>Blue Component</key>
-    		<real><%= color |> Color.from_hexadecimal |> Color.blue %></real>
+    		<real><%= color |> Color.blue %></real>
     		<key>Green Component</key>
-    		<real><%= color |> Color.from_hexadecimal |> Color.green %></real>
+    		<real><%= color |> Color.green %></real>
     		<key>Red Component</key>
-    		<real><%= color |> Color.from_hexadecimal |> Color.red %></real>
+    		<real><%= color |> Color.red %></real>
     	</dict><% end %>
     </dict>
     </plist>
