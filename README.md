@@ -9,6 +9,7 @@ A library to generate Terminal.app and iTerm2 color schemes. Used for [wwdc16.te
 ```elixir
 # mix.exs
 def deps do
+  [{:color, git: "git://github.com/jeffkreeftmeijer/color.git"}]
   [{:colorscheme, git: "git://github.com/jeffkreeftmeijer/colorscheme.git"}]
 end
 ```
@@ -45,7 +46,9 @@ defmodule Mix.Tasks.Generate do
       background: "FFFFFF",
       bold_text: "292C36",
       text: "292C36"
-    ] |> Colorscheme.Terminal.to_plist
+    ]
+    |> Enum.map(fn({key, color}) -> {key, color |> Color.from_hexadecimal} end)
+    |> Colorscheme.Terminal.to_plist
     File.write("wwdc16-dark.terminal", plist)
   end
 end
