@@ -42,11 +42,11 @@ defmodule Colorscheme.Vim do
     highlight Ignore         guifg=#<%= colors[:bright_white] |> Color.to_hexadecimal %>
     highlight Error          guifg=#<%= colors[:bright_white] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_red] |> Color.to_hexadecimal %>
     highlight Todo           guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_yellow] |> Color.to_hexadecimal %>
-    highlight DiffAdd    guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:green] |> Color.to_hexadecimal %>
-    highlight DiffChange guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:yellow] |> Color.to_hexadecimal %>
-    highlight DiffDelete guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:red] |> Color.to_hexadecimal %>
-    highlight DiffText   guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_yellow] |> Color.to_hexadecimal %> gui=bold
-    highlight Visual     guifg=NONE guibg=NONE gui=inverse
+    highlight DiffAdd        guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:green] |> Color.to_hexadecimal %>
+    highlight DiffChange     guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:yellow] |> Color.to_hexadecimal %>
+    highlight DiffDelete     guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:red] |> Color.to_hexadecimal %>
+    highlight DiffText       guifg=#<%= colors[:black] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_yellow] |> Color.to_hexadecimal %> gui=bold
+    highlight Visual         guifg=NONE guibg=NONE gui=inverse
     if &background == "light"
       highlight LineNr      guifg=#<%= colors[:white] |> Color.to_hexadecimal %>
       highlight Comment     guifg=#<%= colors[:white] |> Color.to_hexadecimal %>

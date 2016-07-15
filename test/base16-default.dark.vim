@@ -39,11 +39,11 @@ highlight Underlined     gui=underline guifg=#BA8BAF
 highlight Ignore         guifg=#F8F8F8
 highlight Error          guifg=#F8F8F8 guibg=#DC9656
 highlight Todo           guifg=#181818 guibg=#383838
-highlight DiffAdd    guifg=#181818 guibg=#A1B56C
-highlight DiffChange guifg=#181818 guibg=#F7CA88
-highlight DiffDelete guifg=#181818 guibg=#AB4642
-highlight DiffText   guifg=#181818 guibg=#383838 gui=bold
-highlight Visual     guifg=NONE guibg=NONE gui=inverse
+highlight DiffAdd        guifg=#181818 guibg=#A1B56C
+highlight DiffChange     guifg=#181818 guibg=#F7CA88
+highlight DiffDelete     guifg=#181818 guibg=#AB4642
+highlight DiffText       guifg=#181818 guibg=#383838 gui=bold
+highlight Visual         guifg=NONE guibg=NONE gui=inverse
 if &background == "light"
   highlight LineNr      guifg=#D8D8D8
   highlight Comment     guifg=#D8D8D8
