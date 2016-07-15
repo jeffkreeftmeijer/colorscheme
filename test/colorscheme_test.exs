@@ -46,6 +46,11 @@ defmodule ColorschemeTest do
       assert Colorscheme.Terminal.color_to_base64_encoded_string([0.6313725490, 0.4117647059, 0.2745098039]) == "YnBsaXN0MDDUAQIDBAUGFRZYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVy\n\tVCR0b3ASAAGGoKMHCA9VJG51bGzTCQoLDA0OVU5TUkdCXE5TQ29sb3JTcGFj\n\tZVYkY2xhc3NPECcwLjYzMTM3MjU0OTAgMC40MTE3NjQ3MDU5IDAuMjc0NTA5\n\tODAzOQAQAYAC0hAREhNaJGNsYXNzbmFtZVgkY2xhc3Nlc1dOU0NvbG9yohIU\n\tWE5TT2JqZWN0XxAPTlNLZXllZEFyY2hpdmVy0RcYVHJvb3SAAQgRGiMtMjc7\n\tQUhOW2KMjpCVoKmxtL3P0tcAAAAAAAABAQAAAAAAAAAZAAAAAAAAAAAAAAAA\n\tAAAA2Q=="
     end
 
+    test "converts a number to a formatted string" do
+      assert Colorscheme.Terminal.number_to_formatted_string(1.0) == "1.0000000000"
+      assert Colorscheme.Terminal.number_to_formatted_string(1) == "1.0000000000"
+    end
+
     test "converts color atoms to color names for Terminal.app" do
       assert Colorscheme.Terminal.color_name(:black) == "ANSIBlackColor"
       assert Colorscheme.Terminal.color_name(:red) == "ANSIRedColor"

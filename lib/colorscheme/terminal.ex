@@ -24,7 +24,7 @@ defmodule Colorscheme.Terminal do
 
   def color_to_base64_encoded_string(color) do
     encoded = color 
-              |> Enum.map(&float_to_formatted_string(&1))
+              |> Enum.map(&number_to_formatted_string(&1))
               |> Colorscheme.Terminal.color_to_binary_plist
               |> Base.encode64
 
@@ -32,6 +32,10 @@ defmodule Colorscheme.Terminal do
     |> List.flatten 
     |> Enum.filter(&(String.length(&1) > 0))
     |> Enum.join("\n\t")
+  end
+
+  def number_to_formatted_string(number) do
+    :io_lib.format("~.10f", [number / 1]) |> to_string
   end
 
   def color_name(:black), do: "ANSIBlackColor"
@@ -55,8 +59,4 @@ defmodule Colorscheme.Terminal do
   def color_name(:selection), do: "SelectionColor"
   def color_name(:bold_text), do: "TextBoldColor"
   def color_name(:text), do: "TextColor"
-
-  defp float_to_formatted_string(float) do
-    :io_lib.format("~.10f", [float]) |> to_string
-  end
 end
