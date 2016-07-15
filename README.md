@@ -48,7 +48,7 @@ defmodule Mix.Tasks.Generate do
       text: "292C36"
     ]
     |> Enum.map(fn({key, color}) -> {key, color |> Color.from_hexadecimal} end)
-    |> Colorscheme.Terminal.to_plist
+    |> Colorscheme.Terminal.to_configuration
     File.write("wwdc16-dark.terminal", plist)
   end
 end

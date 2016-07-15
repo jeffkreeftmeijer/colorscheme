@@ -32,8 +32,8 @@ defmodule ColorschemeTest do
 
   describe "generating color schemes for Terminal.app" do
     test "creates a color scheme for Terminal.app", context do
-      plist = Colorscheme.Terminal.to_plist(context[:colors])
-      assert plist == File.read!("test/base16-default.dark.terminal")
+      configuration = Colorscheme.Terminal.to_configuration(context[:colors])
+      assert configuration == File.read!("test/base16-default.dark.terminal")
     end
 
     test "converts a color to a binary plist" do
@@ -75,8 +75,8 @@ defmodule ColorschemeTest do
 
   describe "generating color schemes for Terminal.app" do
     test "creates a color scheme for iTerm2", context do
-      plist = Colorscheme.Iterm2.to_plist(context[:colors])
-      assert plist  == File.read!("test/base16-default.dark.itermcolors")
+      configuration = Colorscheme.Iterm2.to_configuration(context[:colors])
+      assert configuration == File.read!("test/base16-default.dark.itermcolors")
     end
 
     test "converts color atoms to color names for iTerm2" do
