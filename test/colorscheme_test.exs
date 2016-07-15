@@ -105,4 +105,11 @@ defmodule ColorschemeTest do
       assert Colorscheme.Iterm2.color_name(:text) == "Foreground Color"
     end
   end
+
+  describe "generating color schemes for Vim" do
+    test "creates a color scheme for Vim", context do
+      configuration = Colorscheme.Vim.to_configuration(context[:colors])
+      assert configuration == File.read!("test/base16-default.dark.vim")
+    end
+  end
 end
