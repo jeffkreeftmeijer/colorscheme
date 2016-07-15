@@ -64,6 +64,7 @@ defmodule Colorscheme.Vim do
       highlight Pmenu       guifg=#<%= colors[:bright_white] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_black] |> Color.to_hexadecimal %>
       highlight PmenuSel    guifg=#<%= colors[:bright_black] |> Color.to_hexadecimal %> guibg=#<%= colors[:bright_white] |> Color.to_hexadecimal %>
     endif
+    highlight Normal     guifg=#<%=colors[:text] |> Color.to_hexadecimal %> guibg=#<%=colors[:background] |> Color.to_hexadecimal %>
     """, colors: colors)
 	end
 end

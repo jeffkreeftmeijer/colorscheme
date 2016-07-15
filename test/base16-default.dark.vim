@@ -61,3 +61,4 @@ else
   highlight Pmenu       guifg=#F8F8F8 guibg=#585858
   highlight PmenuSel    guifg=#585858 guibg=#F8F8F8
 endif
+highlight Normal     guifg=#D8D8D8 guibg=#181818
