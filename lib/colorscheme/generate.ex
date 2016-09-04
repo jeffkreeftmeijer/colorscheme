@@ -11,9 +11,6 @@ defmodule Mix.Tasks.Generate do
 
       configuration = colors |> Colorscheme.Iterm2.to_configuration
       "#{basename}-#{key}.itermcolors" |> File.write!(configuration)
-
-      configuration = colors |> Colorscheme.Vim.to_configuration
-      "#{basename}-#{key}.vim" |> File.write!(configuration)
     end)
   end
 end
