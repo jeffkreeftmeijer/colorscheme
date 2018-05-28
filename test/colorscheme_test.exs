@@ -79,7 +79,7 @@ defmodule ColorschemeTest do
     end
   end
 
-  describe "generating color schemes for Terminal.app" do
+  describe "generating color schemes for iTerm2" do
     test "creates a color scheme for iTerm2", context do
       configuration = Colorscheme.Iterm2.to_configuration(context[:colors])
       assert configuration == File.read!("test/base16-default.dark.itermcolors")
